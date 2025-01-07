@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Cat';
+    font-style: normal;
+    font-weight: 100;
+    src:
+        local('Cat'),
+        url('/fonts/cat.otf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SourGummy';
+    src: 
+        local('SourGummy'),
+        url('/fonts/sourgummy.ttf') format('truetype');
+}
