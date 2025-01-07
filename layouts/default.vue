@@ -6,7 +6,6 @@
     <slot />
     <footer>
         <NuxtLink :to="route === 'classement' ? '/' : '/classement'" class="classement">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
             <span class="text">Accéder au {{ route === 'classement' ? 'vote' : 'classement' }}</span>
             <span class="votes">{{ totalVotes }} votes totaux</span>
         </NuxtLink>
@@ -19,8 +18,12 @@
     const totalVotes = ref(0);
 
     onMounted(async () => {
-        totalVotes.value = await $fetch('/api/allvotes');
+        await updateVotes();
     })
+
+    async function updateVotes () {
+        totalVotes.value = await $fetch('/api/allvotes');
+    }
 </script>
 
 <style scoped>
@@ -55,8 +58,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        padding-top: 10vh;
 
         font-family: Cat;
     }
