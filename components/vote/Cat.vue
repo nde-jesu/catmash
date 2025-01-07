@@ -45,12 +45,6 @@
         aspect-ratio: 1/1;
     }
 
-    @media (max-width: 1200px) {
-        .cat {
-            width: 100%;
-        }
-    }
-
     .cat a {
         border-radius: 8px;
 
@@ -72,8 +66,12 @@
 
     .cat a:hover {
         cursor: pointer;
-
         width: 80%;
     }
 
+    @media (max-width: 1200px) {
+        .cat {
+            width: 100%;
+        }
+    }
 </style>

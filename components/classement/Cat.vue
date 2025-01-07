@@ -42,12 +42,6 @@
         transform: scale(1.5);
     }
 
-    @media (max-width: 1200px) {
-        img:hover {
-            transform: scale(2.5);
-        }
-    }
-
     .text {
         display: flex;
         flex-wrap: wrap;
@@ -56,5 +50,11 @@
         font-family: SourGummy;
         width: 16vw;
         font-weight: 300;
+    }
+
+    @media (max-width: 1200px) {
+        img:hover {
+            transform: scale(2.5);
+        }
     }
 </style>
